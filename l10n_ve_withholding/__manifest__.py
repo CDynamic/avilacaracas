@@ -45,7 +45,7 @@
         'views/seniat_tabla_islr_view.xml',
         'views/account_payment_group_view.xml',
         'views/account_invoce_withholding.xml',
-        'reports/report_withholding_certificate_invoce_iva.xml',
+        # 'reports/report_withholding_certificate_invoce_iva.xml',
         'reports/puchase_whithholdings_iva.xml',
         
     ],
