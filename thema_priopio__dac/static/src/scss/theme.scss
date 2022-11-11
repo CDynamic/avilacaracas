@@ -37,12 +37,12 @@
 
 .o_field_widget .o_input_dropdown > input, .o_field_widget.o_datepicker > input {
     /* padding-right: 10px; */
-    padding: 5%;
+    // padding: 5%;
 }
 
 .o_field_widget .o_input_dropdown > input {
     cursor: pointer;
-    padding: 5%;
+    // padding: 5%;
 }
 
 .o_main_navbar .dropdown .dropdown-toggle:hover, .o_main_navbar .o_nav_entry:hover, .o_main_navbar > .o_menu_sections > div:hover, .o_main_navbar > .o_menu_sections > div > a:hover, .o_main_navbar .o_menu_systray > div:hover, .o_main_navbar .o_menu_systray > div > a:hover, .o_main_navbar .o_menu_toggle:hover, .o_main_navbar .o_navbar_apps_menu:hover, .o_main_navbar .o_menu_brand:hover, .o_main_navbar .dropdown .dropdown-toggle:focus, .o_main_navbar .o_nav_entry:focus, .o_main_navbar > .o_menu_sections > div:focus, .o_main_navbar > .o_menu_sections > div > a:focus, .o_main_navbar .o_menu_systray > div:focus, .o_main_navbar .o_menu_systray > div > a:focus, .o_main_navbar .o_menu_toggle:focus, .o_main_navbar .o_navbar_apps_menu:focus, .o_main_navbar .o_menu_brand:focus, .o_main_navbar .dropdown .focus.dropdown-toggle, .o_main_navbar .focus.o_nav_entry, .o_main_navbar > .o_menu_sections > div.focus, .o_main_navbar > .o_menu_sections > div > a.focus, .o_main_navbar .o_menu_systray > div.focus, .o_main_navbar .o_menu_systray > div > a.focus, .o_main_navbar .focus.o_menu_toggle, .o_main_navbar .focus.o_navbar_apps_menu, .o_main_navbar .focus.o_menu_brand {
@@ -813,7 +813,7 @@ input {
     font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    color: #13b93d;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da !important;

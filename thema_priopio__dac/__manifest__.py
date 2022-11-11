@@ -12,7 +12,7 @@
     'website': "https://conceptualdynamic.com",
     "depends": ['base', 'web_enterprise', 'web'],
     "data": [
-        # 'views/icons.xml',
+        'views/icons.xml',
     ],
     
     'assets': {
@@ -37,6 +37,8 @@
         ],
     },
     'license': 'LGPL-3',
+    'pre_init_hook': 'test_pre_init_hook',
+    'post_init_hook': 'test_post_init_hook',
     'installable': True,
     'application': False,
     'auto_install': False,
