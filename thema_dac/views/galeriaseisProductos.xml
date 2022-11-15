@@ -68,7 +68,7 @@
                             <div class="card border-0 mr-4 mb-4" style="width: 16rem;">
                                 
                                 <div class="card-body">
-                                    <img class="card-img-top"  alt="" loading="lazy" t-att-src="'data:image/png;base64,%s' % to_text(mp.image)"/>
+                                    <img class="card-img-top"  alt="" loading="lazy" t-att-src="'data:image/png;base64,%s' % to_text(mp.image_1920)"/>
                                 </div>
                                 <div class="card-footer bg-transparent border-0">
                                     <a href="#" class="card-link"><span t-esc="mp.name"/></a>

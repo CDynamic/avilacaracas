@@ -11,6 +11,21 @@ class WebCategory(models.Model):
     description = fields.Char(string='Descripción')
     status  = fields.Boolean(string='Estatus')
 
+class productPublished(models.Model):
+    _inherit =  'product.template'
+    Published  = fields.Boolean(string='Publicado en la WEB')
+
+class productCategory(models.Model):
+    _inherit =  'product.category'
+    status  = fields.Boolean(string=' Activo Para la WEB')
+
+class clientCategorys(models.Model):
+    _inherit= 'res.partner'
+    
+    status  = fields.Boolean(string=' Activo Para la WEB')
+    types = fields.Selection([('A', 'Aliado'), ('C', 'Cliente')], string='Tipo', required=False)
+    website_leaflet_lat = fields.Float('latitude', required=False)
+    website_leaflet_lng = fields.Float('longitude',  required=False)
 
 
 class WebSubCategory(models.Model):

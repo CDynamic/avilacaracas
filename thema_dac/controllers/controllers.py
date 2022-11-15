@@ -16,9 +16,13 @@ class SnoppetController(http.Controller):
     @http.route('/get_main_product', auth="public", method=['GET'], csrf=False , website=True)
     def get_main_product(self):
         try:
-            main_products = request.env['product.Template'].sudo().search([('Published', '=', True)], order='create_date asc', limit=8)
-            category = request.env['product.category'].sudo().search([('parent_id','=',False)], order='name asc')
-            sub_category = request.env['product.category'].sudo().search([('parent_id','!=',False)], order='name asc')
+            main_products = request.env['product.template'].sudo().search([('Published', '=', True)], order='create_date asc', limit=8)
+            category = request.env['product.category'].sudo().search([('parent_id','=',False),('status', '=', True)], order='name asc')
+            statusCat = category.status
+            if statusCat:
+                sub_category = request.env['product.category'].sudo().search([('parent_id','!=',False),('status', '=', True)], order='name asc')
+            else:
+                sub_category = []
             print(category)
             values = {
                 'ids_t':False,
@@ -36,16 +40,16 @@ class SnoppetController(http.Controller):
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
 
 
-    @http.route('/get_main_product/<model("thema_dac.sub_category"):obj>',  type='http', auth="public", website=True, sitemap=False)
+    @http.route('/get_main_product/<model("product.template):obj>',  type='http', auth="public", website=True, sitemap=False)
     # @http.route(['/shop/product/<model("product.template"):product>'], type='http', auth="public", website=True, sitemap=False)
     def object(self, obj, **kw):
         try:
-            main_products = request.env['thema_dac.products'].sudo().search([('Published', '=', True),('category_sub', '=', obj.id )], order='create_date asc', limit=8)
-            category = request.env['product.category'].sudo().search([('status', '=', True)], order='id asc')
-            sub_category = request.env['thema_dac.sub_category'].sudo().search([('status', '=', True)], order='name asc')
+            main_products = request.env['product.template'].sudo().search([('Published', '=', True),('categ_id', '=', obj.id )], order='id asc', limit=8)
+            category = request.env['product.category'].sudo().search([('parent_id','=',False),('status', '=', True)], order='name asc')
+            sub_category = request.env['product.category'].sudo().search([('parent_id','!=',False),('status', '=', True)], order='name asc')
             values = {
                 'ids_t':obj.id,
-                "dor": obj.category.id,
+                "dor": obj.categ_id.id,
                 'main_products': main_products,
                 'main_category': category,
                 'main_sub_category': sub_category,
@@ -61,11 +65,11 @@ class SnoppetController(http.Controller):
 
 
     @http.route('/get_main_cliente',  auth="public", method=['GET'], csrf=False , website=True)
-    # @http.route(['/shop/product/<model("product.template"):product>'], type='http', auth="public", website=True, sitemap=False)
     def object_get_(self):
         try:
            
-            main_cliente = request.env['thema_dac.contacts'].sudo().search([('status', '=', True),('type', '=','C')], order='id asc')
+            main_cliente = request.env['res.partner'].sudo().search([('status', '=', True),('types', '=','C')], order='id asc')
+            print(main_cliente)
             main_estados = request.env['res.country.state'].sudo().search([('country_id','=',238)], order='name asc')
             values = {
                 'main_sub_category': main_cliente,  
@@ -124,20 +128,20 @@ class SnoppetController(http.Controller):
     @http.route('/get_list_cliente',  type="json", auth="public", method=['GET'], csrf=False , website=True)
     def object_get_list(self,args):
         try:
-            
-            main_cliente = request.env['thema_dac.contacts'].sudo().search([('status', '=', True),('type', '=','C'),('municipality_id','=',int(args[0]['id']))], order='id asc')
-            
+            print(args[0]['id'])
+            main_cliente = request.env['res.partner'].sudo().search([('status', '=', True),('types', '=','C'),('municipality_id','=',int(args[0]['id']))], order='id asc')
+            print(main_cliente)
             m=[]
             for items in main_cliente:
                 values = {
                     'id': items.id,
                     'name': items.name,
-                    'hours': items.hors,
+                    # 'hours': items.hors,
                     'address' : items.state_id.name +", "+ items.municipality_id.name +", "+ items.parish_id.name,
-                    'imgen' : items.image
+                    'imgen' : items.image_1920
                 }
                 m.append(values)
-            
+            print(m)
             return m
         except Exception as e:
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
@@ -147,7 +151,7 @@ class SnoppetController(http.Controller):
     def object_get_map(self,args):
         try:
             
-            main_cliente = request.env['thema_dac.contacts'].sudo().search([('id','=',int(args[0]['id']))], )
+            main_cliente = request.env['res.partner'].sudo().search([('id','=',int(args[0]['id']))], )
             
             m=[]
             for items in main_cliente:
