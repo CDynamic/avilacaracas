@@ -22,10 +22,11 @@ class productCategory(models.Model):
 class clientCategorys(models.Model):
     _inherit= 'res.partner'
     
+    hors = fields.Char(string='Horario')
     status  = fields.Boolean(string=' Activo Para la WEB')
     types = fields.Selection([('A', 'Aliado'), ('C', 'Cliente')], string='Tipo', required=False)
-    website_leaflet_lat = fields.Float('latitude', required=False)
-    website_leaflet_lng = fields.Float('longitude',  required=False)
+    website_leaflet_lat = fields.Char('latitude', required=False)
+    website_leaflet_lng = fields.Char('longitude',  required=False)
 
 
 class WebSubCategory(models.Model):

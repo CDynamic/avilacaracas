@@ -19,6 +19,7 @@
         'views/galeriaseisProductos.xml',
         'views/view_Back.xml',
         'views/map_cliente.xml',
+        'views/map_aliado.xml',
         
         'views/snippets/banner.xml',
         
