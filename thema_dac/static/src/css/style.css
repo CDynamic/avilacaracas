@@ -4227,3 +4227,11 @@ margin:auto;
   font-size: small;
   color: grey;
  }
+
+ header .navbar-brand.logo img {
+  /* object-fit: contain;
+  display: block;
+  width: auto; */
+  height: 4.5rem !important;
+}
+

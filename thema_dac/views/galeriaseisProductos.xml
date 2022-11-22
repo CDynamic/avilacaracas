@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
+        
 
         <template id="galeriaseisProductos_snipet"  name="Producto">
           <t t-call="website.layout">
-          <div id="CabeceraProduct" class="oe_structure"></div>
             <section class="product" >
             <div class="container text-center">
             </div>
@@ -80,7 +80,6 @@
               </div>
             </div>
         </section>
-        <div id="fooproducto" class="oe_structure"></div>
         </t>
             
         </template>

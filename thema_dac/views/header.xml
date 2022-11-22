@@ -12,19 +12,19 @@
                     
                     
                     <span>
-                    <a href="https://informacion@drogeriaavila.com" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;">informacion@drogeriaavila.com</a>
+                    <a href="https://informacion@drogeriaavila.com" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;">ventas@avilacaracas.com ​</a>
                     </span>
                 </small>
                 </div>
                 <div class="col-lg-6 text-lg-right o_colored_level" data-original-title="" title="" aria-describedby="tooltip286428">
                     <span class="mr-3">
-                        <a href="tel:+1 (650) 555-0111" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;" >2da Avenida, Quinta Villa Tina, Montalbán, Caracas - Distrito Capital</a>
+                        <a href="tel:+1 (650) 555-0111" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;" > Centro Comercial Uslar, Montalbán, Caracas - Distrito Capital</a>
                     </span>
                 </div>
                 <div class="col-lg-4 text-lg-right o_colored_level" data-original-title="" title="" aria-describedby="tooltip286428">
                     
                     <span class="mr-3">
-                            <a href="tel:+1 (650) 555-0111" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;" >+58 (212) 555-0111/ +58 (414)555-2222</a>
+                            <a href="tel:+1 (650) 555-0111" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;" >+58(424)208-11-61</a>
                     </span>
                 
                 </div>
@@ -43,12 +43,12 @@
             <div id="top_menu_container" class="container justify-content-start justify-content-lg-between">
                 <!-- Brand -->
                 <t t-call="website.placeholder_header_brand">
-                    <t t-set="_link_class" t-valuef="mr-3"/>
+                    <t t-set="_link_class" t-valuef="mr-4"/>
                    
                 </t>
-                <p class="drogueríaávilacaracas2 ml-0 mr-5 pt-4">Droguería
+                <!-- <p class="drogueríaávilacaracas2 ml-0 mr-5 pt-4">Droguería
                 <br/>
-                <b>Ávila Caracas</b></p>
+                <b>Ávila Caracas</b></p> -->
                 <!-- Navbar Collapse -->
                 <div id="top_menu_collapse" class="collapse navbar-collapse order-last order-lg-0">
                     <t t-call="website.navbar_nav">

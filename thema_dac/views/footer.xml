@@ -9,11 +9,11 @@
                     <div class="container">
                         <div class="footer_top">
                             <div class="row align-items-center">
-                                <div class="col-12 col-lg-4 col-md-12 col-sm-12">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
+                                <div class="col-12 col-lg-2 col-md-12 col-sm-12">
+                                    
+                                       
 
-                                            <div class="footer_left mr-0">
+                                            <div class="footer_center mr-0">
                                                 <div class="footer_logo mr-0">
                                                     <a href="/">
                                                         <t t-call="website.placeholder_header_brand">
@@ -23,13 +23,9 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="drogueríaávilacaracas ml-0 pt-5">Droguería<br/><b>Ávila Caracas</b></p>
-                                        </div>
-                                    </div>
+                                        
                                 </div>
-                                <div class="col-12 col-lg-8 col-md-12 col-sm-12">
+                                <div class="col-12 col-lg-10 col-md-12 col-sm-12">
                                     <div class="footer_right">
                                         <div class="footer_right_bottom">
                                             <div class="row">
@@ -51,16 +47,16 @@
                                                                 </t>
                                                             </ul>
                                                             <ul>
-                                                                <a href="">
+                                                                <a href="/nosotros">
                                                                     <li>
                                                                         Nosotros
                                                                     </li>
                                                                 </a>
-                                                                <a href="">
+                                                                <a href="/politicas">
                                                                     <li>Privacidad y Política
                                                                     </li>
                                                                 </a>
-                                                                <a href="">
+                                                                <a href="/terminos">
                                                                     <li>Términos y Condiciones
                                                                     </li>
                                                                 </a>
@@ -76,12 +72,12 @@
                                                         </h4>
                                                         <div class="address">
                                                         <ul>
-                                                           <li> +58 212 000 00 00 / 000 00 00</li>
+                                                           <li> +58(424)208-11-61</li>
                                                            <li>
-                                                            <b>Informacion@drogueriaavila.com</b>
+                                                            <b>ventas@avilacaracas.com </b>
                                                             </li>
                                                             <li>
-                                                            2da Avenida, Quinta Villa Tina, Montalbán, Caracas - Distrito Capital
+                                                            Centro Comercial Uslar, Montalbán, Caracas - Distrito Capital
                                                             </li>
                                                             <field name="website_country_group_ids" widget="many2many_tags"/>
                                                         </ul>
