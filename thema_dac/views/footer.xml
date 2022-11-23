@@ -97,7 +97,7 @@
 
                                 
 
-                                <div class="col-6 f_b_r">
+                                <div class="col-4 f_b_r">
                                     <div class="bottom_left">
                                         <span> 
                                         <a href="#">Copyright © 2022 Droguería Ávila Caracas C. A</a>
@@ -118,14 +118,25 @@
                                 <div class="col-6">
                                     <div class="bottom_right">
                                         <div class="footer-social">
-                                            <a href="/website/social/facebook">
+                                            <a href="https://conceptualdynamic.com/">
+                                                <span> Hecho por Conceptual Dynamic 💙</span>
+                                            </a> 
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="bottom_right">
+                                        <div class="footer-social">
+                                            <!-- <a href="/website/social/facebook">
                                                 <i class="fa fa-facebook m-1"/>
                                             </a>
                                             <a href="/website/social/twitter"
                                                class="s_share_twitter"
                                                target="_blank">
                                                 <i class="fa fa-twitter m-1"/>
-                                            </a>
+                                            </a> -->
                                             <a href="/website/social/instagram"
                                                class="s_share_instagram"
                                                target="_blank">
