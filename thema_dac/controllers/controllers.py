@@ -137,7 +137,7 @@ class SnoppetController(http.Controller):
                 values = {
                     'id': items.id,
                     'name': items.name,
-                    # 'hours': items.hors,
+                    'hours': items.hors,
                     'address' : items.state_id.name +", "+ items.municipality_id.name +", "+ items.parish_id.name,
                     'imgen' : items.image_1920
                 }

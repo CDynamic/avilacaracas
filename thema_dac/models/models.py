@@ -27,7 +27,7 @@ class clientCategorys(models.Model):
     types = fields.Selection([('A', 'Aliado'), ('C', 'Cliente')], string='Tipo', required=False)
     website_leaflet_lat = fields.Char('latitude', required=False)
     website_leaflet_lng = fields.Char('longitude',  required=False)
-    # hors = fields.Char(string='Horario')
+    hors = fields.Char(string='Horario')
 
 
 class WebSubCategory(models.Model):
