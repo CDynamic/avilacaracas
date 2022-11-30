@@ -1,41 +1,5 @@
 <odoo>
     <data>
-    
-        	<!-- product.product_template_only_form_view -->
-             <!-- <record id="view_product_template_form" model="ir.ui.view">
-            <field name="name">view.product.template.form</field>
-            <field name="model">product.template</field>
-            <field name="inherit_id" ref="product.product_template_only_form_view" />
-            <field name="arch" type="xml">
-                <xpath  expr="//div[@name='options']">
-                <span class="d-inline-block">
-                            <field name="Published" modifiers="{}"/>
-                            <label for="Published"/>
-                        </span>
-                
-                    
-                </xpath>
-                
-            </field>
-        </record>
-
-        <record id="view_product_category_form_in" model="ir.ui.view">
-            <field name="name">view.product.category.form</field>
-            <field name="model">product.category</field>
-            <field name="inherit_id" ref="product.product_category_form_view" />
-            <field name="arch" type="xml">
-                <xpath  expr="//group[@name='logistics']" position="after" >
-                    <group name="web" string="configuracion para la Web">
-                        <span class="d-inline-block">
-                            <field name="status" modifiers="{}"/>
-                            <label for="status"/>
-                        </span>
-                    
-                    </group>    
-                </xpath>
-                  
-            </field>
-        </record> -->
         <record id="view_res_partne_form_int" model="ir.ui.view">
             <field name="name">view.res.partne.formt</field>
             <field name="model">res.partner</field>
@@ -46,14 +10,9 @@
                     <field name="types"  attrs="{'invisible': [('status', '=', False)]}"  />    
                     <field name="website_leaflet_lat"  attrs="{'invisible': [('status', '=', False)]}" placeholder="10.474754" />    
                     <field name="website_leaflet_lng"  attrs="{'invisible': [('status', '=', False)]}" placeholder="-66.955545" />
-                    <field name="hors"  attrs="{'invisible': [('status', '=', False)]}"  />
-                    
-                    
+                    <field name="hors"  attrs="{'invisible': [('status', '=', False)]}"  />   
                 </xpath>
             </field>
-        </record>
-
-       
-
+        </record>   
     </data>
 </odoo>
