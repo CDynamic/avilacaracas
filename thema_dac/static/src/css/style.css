@@ -576,8 +576,8 @@ template {
 .navbar {
   background-color: #fff;
   z-index: 1;
-  position: absolute;
-  top: 40px;
+  position: relative !important;
+  top: 0px !important;
   width: 100%;
   box-shadow: #57a595 0px 1px 8px 0px !important;
   min-height: 10vh;

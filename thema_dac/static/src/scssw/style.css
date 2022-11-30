@@ -572,8 +572,8 @@ template {
 
 .navbar {
   z-index: 1;
-  position: absolute;
-  top: 70px;
+  /* position: absolute; */
+  /* top: 70px; */
   width: 100%;
 }
 

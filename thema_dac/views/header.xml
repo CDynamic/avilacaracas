@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="layout_tema_dac" name="Main layout" inherit_id="portal.frontend_layout">
-        <xpath expr="//header" position="inside">
+        <xpath expr="//t [@t-call='website.navbar']" position="before">
 
         <div class="oe_structure oe_structure_solo" id="oe_structure_header_contact_1" data-oe-id="1931" data-oe-xpath="/data/xpath/div" data-oe-model="ir.ui.view" data-oe-field="arch">
         <section class="s_text_block pt8 pb8 o_colored_level o_cc o_cc4" data-snippet="s_text_block" data-name="Text" style="background-color: rgb(87, 165, 149) !important;">
@@ -65,7 +65,7 @@
                 <t t-set="_icon" t-value="True"/>
                 <t t-set="_item_class" t-value="'nav-item mx-lg-3'"/>
                 <t t-set="_link_class" t-value="'nav-link'"/>
-            </t>
+            </t> 
             <!-- <t t-call="website_sale_wishlist.header_wishlist_link">
                 <t t-set="_icon" t-value="True"/>
                 <t t-set="_item_class" t-value="'nav-item mr-lg-3'"/>
