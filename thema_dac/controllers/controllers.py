@@ -13,56 +13,56 @@ class SnoppetController(http.Controller):
     
 
 
-    @http.route('/get_main_product', auth="public", method=['GET'], csrf=False , website=True)
-    def get_main_product(self):
-        try:
-            print('category')
-            main_products = request.env['product.template'].sudo().search([('Published', '=', True)], order='create_date asc', limit=8)
-            category = request.env['product.category'].sudo().search([('parent_id','=',False),('status', '=', True)], order='name asc')
-            # print(category)
-            sub_category = request.env['product.category'].sudo().search([('parent_id','!=',False),('status', '=', True)], order='name asc')
+    # @http.route('/get_main_product', auth="public", method=['GET'], csrf=False , website=True)
+    # def get_main_product(self):
+    #     try:
+    #         print('category')
+    #         main_products = request.env['product.template'].sudo().search([('Published', '=', True)], order='create_date asc', limit=8)
+    #         category = request.env['product.category'].sudo().search([('parent_id','=',False),('status', '=', True)], order='name asc')
+    #         # print(category)
+    #         sub_category = request.env['product.category'].sudo().search([('parent_id','!=',False),('status', '=', True)], order='name asc')
             
-            # print(sub_category)
-            values = {
-                'ids_t':False,
-                "dor":False,
-                'main_products': main_products,
-                'main_category': category,
-                'main_sub_category': sub_category,    
+    #         # print(sub_category)
+    #         values = {
+    #             'ids_t':False,
+    #             "dor":False,
+    #             'main_products': main_products,
+    #             'main_category': category,
+    #             'main_sub_category': sub_category,    
 
-            }
+    #         }
             
-            response = http.Response(template='thema_dac.galeriaseisProductos_snipet', qcontext=values)
-            return response.render()
-        except Exception as e:
-            return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
+    #         response = http.Response(template='thema_dac.galeriaseisProductos_snipet', qcontext=values)
+    #         return response.render()
+    #     except Exception as e:
+    #         return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
 
 
-    @http.route('/get_main_product/<model("product.category"):obj>',  type='http', auth="public", website=True, sitemap=False)
-    # @http.route(['/shop/product/<model("product.template"):product>'], type='http', auth="public", website=True, sitemap=False)
-    def object(self, obj, **kw):
-        print(obj)
-        try:
-            main_products = request.env['product.template'].sudo().search([('Published', '=', True),('categ_id', '=', int(obj.id) )], order='id asc', limit=8)
-            print(main_products)
-            # main_products = request.env['product.template'].sudo().search([('Published', '=', True)], limit=8)
-            category = request.env['product.category'].sudo().search([('parent_id','=',False),('status', '=', True)], order='name asc')
-            sub_category = request.env['product.category'].sudo().search([('parent_id','!=',False),('status', '=', True)], order='name asc')
-            values = {
-                'ids_t':obj.id,
-                "dor": obj.id,
-                'main_products': main_products,
-                'main_category': category,
-                'main_sub_category': sub_category,
+    # @http.route('/get_main_product/<model("product.category"):obj>',  type='http', auth="public", website=True, sitemap=False)
+    # # @http.route(['/shop/product/<model("product.template"):product>'], type='http', auth="public", website=True, sitemap=False)
+    # def object(self, obj, **kw):
+    #     print(obj)
+    #     try:
+    #         main_products = request.env['product.template'].sudo().search([('Published', '=', True),('categ_id', '=', int(obj.id) )], order='id asc', limit=8)
+    #         print(main_products)
+    #         # main_products = request.env['product.template'].sudo().search([('Published', '=', True)], limit=8)
+    #         category = request.env['product.category'].sudo().search([('parent_id','=',False),('status', '=', True)], order='name asc')
+    #         sub_category = request.env['product.category'].sudo().search([('parent_id','!=',False),('status', '=', True)], order='name asc')
+    #         values = {
+    #             'ids_t':obj.id,
+    #             "dor": obj.id,
+    #             'main_products': main_products,
+    #             'main_category': category,
+    #             'main_sub_category': sub_category,
                 
 
-            }
+    #         }
             
-            response = http.Response(template='thema_dac.galeriaseisProductos_snipet', qcontext=values)
+    #         response = http.Response(template='thema_dac.galeriaseisProductos_snipet', qcontext=values)
             
-            return response.render()
-        except Exception as e:
-            return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
+    #         return response.render()
+    #     except Exception as e:
+    #         return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
 
 
     @http.route('/get_main_cliente',  auth="public", method=['GET'], csrf=False , website=True)

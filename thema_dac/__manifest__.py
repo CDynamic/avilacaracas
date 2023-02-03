@@ -9,7 +9,7 @@
     'company': 'conceptual dynamic Techno Solutions',
     'maintainer': 'conceptual dynamic Techno Solutions',
     'website': "https://www.conceptualdynamic.com",
-    'depends': ['website','territorial_pd','ctdac'],
+    'depends': ['website','territorial_pd','ctdac','website_sale'],
     'data': [
         
         'views/views.xml',
@@ -19,6 +19,7 @@
         'views/map_cliente.xml',
         'views/map_aliado.xml',
         'views/snippets/banner.xml',
+        'views/products_iteme.xml',
         
     ],
     'images': [

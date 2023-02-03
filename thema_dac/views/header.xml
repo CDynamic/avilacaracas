@@ -9,10 +9,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-2 o_colored_level" data-original-title="" title="" aria-describedby="tooltip1145">
                 <small data-original-title="" title="" aria-describedby="tooltip449610">
-                    
-                    
                     <span>
                     <a href="https://informacion@drogeriaavila.com" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;">ventas@avilacaracas.com ​</a>
+                    <field name="logged_user"/>
                     </span>
                 </small>
                 </div>
@@ -26,8 +25,6 @@
                     <span class="mr-3">
                             <a href="tel:+1 (650) 555-0111" data-original-title="" title="" style=" text-decoration: none;  font-size: 12px !important; color: #ffffff !important;" >+58(424)208-11-61</a>
                     </span>
-                 
-                 
                 </div>
             </div>
             </div>
@@ -61,16 +58,13 @@
                                 <t t-set="link_class" t-valuef="nav-link"/>
                             </t>
                         </t>
-            <t t-call="website_sale.header_cart_link">
-                <t t-set="_icon" t-value="True"/>
-                <t t-set="_item_class" t-value="'nav-item mx-lg-3'"/>
-                <t t-set="_link_class" t-value="'nav-link'"/>
-            </t> 
-            <!-- <t t-call="website_sale_wishlist.header_wishlist_link">
-                <t t-set="_icon" t-value="True"/>
-                <t t-set="_item_class" t-value="'nav-item mr-lg-3'"/>
-                <t t-set="_link_class" t-value="'nav-link'"/>
-            </t> -->
+                        <t t-call="website_sale.header_cart_link">
+                            <t t-set="_icon" t-value="True"/>
+                            <t t-set="_item_class" t-value="'nav-item mx-lg-3'"/>
+                            <t t-set="_link_class" t-value="'nav-link'"/>
+                            
+                        </t> 
+            
                         <!-- Sign In -->
                         <t t-call="portal.placeholder_user_sign_in">
                             <t t-set="_item_class" t-valuef="nav-item ml-lg-auto"/>
@@ -103,7 +97,8 @@
     </template>
 
     
-
-
+<!-- 
+<t t-set="is_connected" t-value="not user_id._is_public()"/>
+        <li t-if="is_connected" t-attf-class="#{_item_class} o_no_autohide_item"> -->
 </odoo>
 
